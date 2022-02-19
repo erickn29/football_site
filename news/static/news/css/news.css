@@ -1,0 +1,61 @@
+.news_object{
+    padding: 7px;
+    border-bottom: 1px solid #d5d5d5;
+    transition: 0.3s;
+}
+
+.news_object:hover{
+    background-color: rgb(224, 224, 224);
+    transition: 0.3s;
+}
+
+.date_news{
+    font-size:10px;
+    /*display: inline-block;*/
+    color: rgb(128, 148, 135);
+}
+
+a {
+    text-decoration: none !important;
+    color: #464646 !important;
+    transition: 0.3s;
+}
+
+a:hover{
+    color: #009952 !important;
+    transition: 0.3s;
+}
+
+.club_banner{
+    text-align: center;
+    justify-content: center;
+    display: block;
+}
+
+.club_title{
+    font-size: 20px;
+    color:#009952;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.pagination{
+    /* background-color: aquamarine !important; */
+    justify-content: center !important;
+    padding: 10px;
+}
+
+.pagination a{
+    background-color:#009952;
+    border: 1px solid #009952;
+    padding: 0 5px;
+    font-size: 20px;
+    color:#ffffff !important;
+    font-weight: bolder;
+}
+
+.pagination a:hover{
+    background-color:#ffffff;
+    border: 1px solid #009952;
+    color:#009952 !important;
+}

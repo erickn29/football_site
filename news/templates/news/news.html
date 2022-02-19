@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block css_add %}
+<link rel="stylesheet" href=" {% static 'news/css/news.css' %}">
+{% endblock %}
+
+{% block title %}
+{% if club %}
+ФК {{ club }} - Новости
+{% else %}
+Новости Футбола
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="news_list container">
+{% for new in news_list %}
+    <div class="news_object"><a href="{{ new.get_url }}">{{ new }}</a>
+        <div class="date_news">{{ new.date|date:"d.m.y" }}</div>
+    </div>
+{% endfor %}
+{% include 'includes/paginator.html' %}
+</div>
+{% endblock %}
+
+
+{% block right %}
+{% if club %}
+<div class="club_banner">
+<img src="{{ club_logo }}" alt="{{ club }}">
+<div class="club_title">{{ club }}</div>
+</div>
+{% endif %}
+{% endblock %}

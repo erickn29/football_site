@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block css_add %}
+<link rel="stylesheet" href=" {% static 'news/css/article.css' %}">
+{% endblock %}
+
+{% block title %}
+{{ article.title }}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+<h1>{{ article.title }}</h1>
+<div class="date_news">{{ article.date|date:"d.m.Y" }}</div>
+<br>
+<p>{{ article.content }}</p>
+<span style="font-size:10px; color: #999; padding-right: 7px; float: right;">Источник sports.ru</span>
+</div>
+{% endblock %}

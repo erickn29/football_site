@@ -1,0 +1,32 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">FOOTBALL</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'index_news' %}">Все Новости</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li> -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Клубы
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  {% for club_url, club_name in clubs_dict.items %}
+                    <li><img src="{{ club_name.1 }}" style="width:30px; display:inline; margin-left: 10px;"><a class="dropdown-item" href="{% url 'club_news_list' club=club_url %}">{{ club_name.0 }}</a></li>
+                  {% endfor %}
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Искать</button>
+            </form>
+          </div>
+        </div>
+      </nav>

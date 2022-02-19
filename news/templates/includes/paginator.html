@@ -1,0 +1,17 @@
+<div class="pagination">
+    <span class="step-links">
+        {% if news_list.has_previous %}
+            <a href="?page=1"><<</a>
+            <a href="?page={{ news_list.previous_page_number }}"><</a>
+        {% endif %}
+
+        <span class="current">
+            Страница {{ news_list.number }} из {{ news_list.paginator.num_pages }}
+        </span>
+
+        {% if news_list.has_next %}
+            <a href="?page={{ news_list.next_page_number }}">></a>
+            <a href="?page={{ news_list.paginator.num_pages }}">>></a>
+        {% endif %}
+    </span>
+</div>

@@ -1,0 +1,15 @@
+h1 {
+    font-size: 24px !important;
+    padding: 7px;
+}
+
+p{
+    padding: 7px;
+}
+
+.date_news{
+    font-size:14px;
+    color: rgb(104, 128, 111);
+    float: right;
+    padding: 0 7px;
+}

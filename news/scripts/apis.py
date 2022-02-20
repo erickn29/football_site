@@ -112,4 +112,4 @@ def get_club_stands(*args):
             time.sleep(3)
     return data
 
-print(get_league_table(LEAGUES.values()))
+# print(get_league_table(LEAGUES.values()))
